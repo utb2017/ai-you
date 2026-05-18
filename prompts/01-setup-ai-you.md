@@ -23,6 +23,7 @@ Copy the foundation structure into that private repo:
 - categories/
 - skills/
 - templates/
+- prompts/
 - logs/
 
 Important:
@@ -36,10 +37,26 @@ Important:
   - `prompts/02-archive-github.md`
   - `prompts/03-recall-context.md`
 
+Then prove GitHub write contact before calling setup complete:
+
+- Create a smoke-test file in `logs/smoke-tests/`
+- Filename format: `YYYY-MM-DD-HHMM-github-write-smoke-test.md`
+- Content: `AI You GitHub write contact established.`
+- Read the file back from GitHub after writing it.
+- If GitHub asks for confirmation, trigger the confirmation modal and wait for me to press Confirm.
+- Do not archive personal content during setup. Only create the smoke-test file.
+
 Please remember these commands if memory is available:
 
 - `Archive GitHub` means save the important durable context from the current chat into my private `ai-you-memory` repo.
 - `Recall Context` means read my private `ai-you-memory` repo and pull relevant context before answering.
 
 Do not ask me to choose folders or filenames by default. Make the best reasonable decision, redact dangerous secrets, update indexes/logs, and verify GitHub writes when possible.
+
+If GitHub write actions are not visible:
+
+- search/list/discover the GitHub connector/app action surface
+- look for create file, update file, repository contents, save file, commit file, create private GitHub file, or a confirmation-gated app action
+- do not invent unlisted low-level routes
+- if this model surface cannot write, tell me to switch ChatGPT model/surface and rerun this same setup prompt
 ```

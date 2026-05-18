@@ -29,6 +29,7 @@ Create your private copy:
    - OpenAI GitHub connector help: [Connecting GitHub to ChatGPT](https://help.openai.com/en/articles/11145903-connecting-github-to-chatgpt)
    - Connector overview: [Connectors in ChatGPT](https://help.openai.com/en/articles/11487775/)
 3. Give ChatGPT access to the private repo it creates for you.
+4. Let ChatGPT run the setup smoke test. The setup is not finished until ChatGPT can create a small test file in your private repo and read it back.
 
 Model note: in testing, regular `5.5 extended thinking` exposed the needed GitHub and memory tools more reliably than Pro for this workflow. If the GitHub tools do not appear, switch model/surface before assuming the setup is broken.
 
@@ -58,6 +59,7 @@ Copy the foundation structure into that private repo:
 - categories/
 - skills/
 - templates/
+- prompts/
 - logs/
 
 Important:
@@ -71,12 +73,27 @@ Important:
   - `prompts/02-archive-github.md`
   - `prompts/03-recall-context.md`
 
+Then run a GitHub write smoke test:
+
+- Create a file in `logs/smoke-tests/`
+- Filename format: `YYYY-MM-DD-HHMM-github-write-smoke-test.md`
+- Content: `AI You GitHub write contact established.`
+- Read the file back from GitHub after writing it.
+- If ChatGPT asks for a GitHub confirmation, trigger the modal and wait for me to press Confirm.
+- Do not call setup complete until the smoke-test file is verified.
+
 Please remember these commands if memory is available:
 
 - `Archive GitHub` means save the important durable context from the current chat into my private `ai-you-memory` repo.
 - `Recall Context` means read my private `ai-you-memory` repo and pull relevant context before answering.
 
 Do not ask me to choose folders or filenames by default. Make the best reasonable decision, redact dangerous secrets, update indexes/logs, and verify GitHub writes when possible.
+
+If GitHub write tools are not visible:
+
+- search/list/discover the GitHub connector actions before giving up
+- look for create file, update file, repository contents, save file, commit file, or a confirmation-gated GitHub app action
+- if this model surface cannot write, tell me to switch ChatGPT model/surface and rerun this same setup prompt
 ```
 
 ### Prompt 2: Archive This Chat
@@ -88,6 +105,8 @@ Archive GitHub
 ```
 
 ChatGPT should read `skills/archive-github/SKILL.md` from your private repo and save the durable context into the right folder.
+
+If ChatGPT cannot write, it should produce a complete archive packet inline or as a downloadable Markdown file so the memory is not lost.
 
 ### Prompt 3: Recall Context
 
@@ -152,6 +171,17 @@ AI You is designed to preserve meaning, not secrets.
 ## About GitHub Confirmations
 
 ChatGPT may ask you to confirm GitHub file writes. That is normal safety behavior. The goal is to keep the workflow simple, but some confirmations may be unavoidable when writing private files.
+
+## Troubleshooting
+
+If ChatGPT says GitHub is connected but cannot write:
+
+- Make sure the private repo exists and ChatGPT has access to it.
+- Try regular `5.5 extended thinking` if another model surface does not expose GitHub write actions.
+- Ask ChatGPT to run the setup smoke test again.
+- The correct diagnosis may be "this ChatGPT session did not expose a write action," not "GitHub cannot write."
+
+If setup cannot create the private repo automatically, use the template link above, create a private copy named `ai-you-memory`, then rerun Prompt 1.
 
 ## Public vs Private
 

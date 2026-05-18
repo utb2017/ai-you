@@ -30,6 +30,7 @@ This is not brainstorming. This is not a proposal. This is not a generic summary
    - Default: `ai-you-memory`
    - If memory/custom instructions mention another repo, use that.
    - Never write personal notes to the public foundation repo `utb2017/ai-you`.
+   - If the repo does not exist, use `https://github.com/utb2017/ai-you/generate` as the setup fallback and ask the user to create a private copy.
 2. Read the private repo state:
    - `README.md`
    - `index.md`
@@ -116,13 +117,49 @@ After creating notes:
 
 ## GitHub Write Behavior
 
+Writing to GitHub is the primary path. Do not stop at a plan.
+
 If GitHub asks the user to confirm file creation/update, trigger the confirmation modal and wait for the user to confirm.
 
 Do not claim success unless the file exists after writing.
 
+If write actions are not immediately visible:
+
+1. Search/list/discover the GitHub connector/app action surface.
+2. Look for actions named like:
+   - create file
+   - update file
+   - repository contents
+   - save file
+   - commit file
+   - create private GitHub file
+   - create or update file contents
+3. Use only actions that are actually exposed in the session.
+4. Do not invent unlisted low-level routes.
+5. If a route fails, try another exposed write route or branch/PR route if available.
+
 If GitHub write is unavailable but file creation/download is available, create a downloadable archive packet containing the full note bodies and index/log updates.
 
 If neither GitHub write nor file download is available, paste the complete archive packet inline.
+
+The archive packet must include:
+
+- every new Markdown file path
+- every full Markdown file body
+- exact category `_index.md` updates
+- exact root `index.md` updates when needed
+- exact `logs/import-log.md` rows
+- suggested commit message
+
+Correct write failure wording:
+
+`This session did not expose a working GitHub write action. The archive packet is complete so the memory can still be saved.`
+
+Do not say:
+
+- `GitHub cannot write`
+- `The repo cannot be updated`
+- `The archive is impossible`
 
 ## Final Response
 
@@ -135,4 +172,3 @@ Keep it short:
 - any uncertainty
 
 Do not end by asking the user what to do next.
-
