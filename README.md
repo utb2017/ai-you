@@ -6,6 +6,14 @@ AI You is a simple GitHub-based memory system for ChatGPT. It gives you a privat
 
 This public repo is the starter foundation. It contains only instructions, prompts, skills, categories, and templates. Your personal memory should live in your own private copy.
 
+Public foundation repo:
+
+[github.com/utb2017/ai-you](https://github.com/utb2017/ai-you)
+
+Create your private copy:
+
+[Use this template](https://github.com/utb2017/ai-you/generate)
+
 ## What You Get
 
 - A private GitHub archive for your important ChatGPT context.
@@ -56,7 +64,7 @@ Important:
 
 - My private personal data must go only into my private repo, not into the public `utb2017/ai-you` repo.
 - If `ai-you-memory` already exists, use it instead of creating a duplicate.
-- If you cannot create the repo directly, tell me to click "Use this template" or fork/copy the public repo into a private repo, then continue setup after I confirm.
+- If you cannot create the repo directly, tell me to open `https://github.com/utb2017/ai-you/generate`, create a private repo named `ai-you-memory`, then continue setup after I confirm.
 - After the repo exists, read:
   - `skills/archive-github/SKILL.md`
   - `skills/recall-context/SKILL.md`
@@ -177,4 +185,3 @@ ai-you/
 ## License
 
 MIT
-
