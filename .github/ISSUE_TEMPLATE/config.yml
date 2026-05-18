@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Quickstart
+    url: https://github.com/utb2017/ai-you/blob/main/docs/QUICKSTART.md
+    about: 10-minute setup walkthrough.
+  - name: Troubleshooting
+    url: https://github.com/utb2017/ai-you/blob/main/docs/TROUBLESHOOTING.md
+    about: Try these steps before opening a "didn't work" issue.
+  - name: FAQ
+    url: https://github.com/utb2017/ai-you/blob/main/docs/FAQ.md
+    about: Common questions before and after setup.

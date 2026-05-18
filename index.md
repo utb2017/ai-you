@@ -1,6 +1,6 @@
-# AI You Index
+# AI You — Index
 
-This is the main index for a private AI You memory archive.
+This is the root index for an AI You memory archive. In **your private** `ai-you-memory` repo, this file is what ChatGPT scans first when you say `Recall Context`. In the public foundation repo, this file is empty of personal data and just shows the shape.
 
 ## Categories
 
@@ -20,7 +20,14 @@ This is the main index for a private AI You memory archive.
 
 No imports yet.
 
-## Import Log
+## Logs
 
-- [Import Log](logs/import-log.md)
+- [Import log](logs/import-log.md)
+- [Smoke tests](logs/smoke-tests/)
+- [Relay packets](logs/relay-packets/)
 
+## How this index gets updated
+
+The archive skill updates this file when an archive is **major or recurring**. Smaller archives only touch the relevant category `_index.md` and the import log, to avoid stuffing the root index with everything.
+
+If you ever want to clean it up by hand, you can. It's plain Markdown.
