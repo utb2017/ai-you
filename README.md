@@ -232,7 +232,7 @@ It also updates the right `_index.md` files and the import log so future recalls
 
 ## Privacy and safety
 
-- **Your memory repo should be Private.** The template flow defaults to Private. Keep it that way.
+- **Your memory repo should be Private.** When GitHub asks for visibility, choose Private and keep it that way.
 - **AI You preserves meaning, not secrets.** The archive skill is told to redact: passwords, API keys, auth tokens, bank details, SSNs, private keys, exact credentials, exact phone numbers, and anything dangerous if leaked.
 - **The public repo (`utb2017/ai-you`) must never receive your personal notes.** Both skills are told to refuse writes to the public foundation.
 - **You can read, edit, or delete anything any time.** The notes are plain Markdown files in your own GitHub account.

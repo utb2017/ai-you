@@ -6,7 +6,7 @@ No. AI You is a free public GitHub template plus two short commands. There is no
 
 ### Is this safe?
 
-Your memory repo is **private** by default. Only you and ChatGPT (through the GitHub connector you authorize) can read or write to it. The archive skill is also told to redact passwords, API keys, exact credentials, SSNs, exact phone numbers, and similar dangerous data even though the repo is private.
+Your memory repo should be **private**. When you create it from the template, choose Private. Only you and ChatGPT (through the GitHub connector you authorize) should be able to read or write to it. The archive skill is also told to redact passwords, API keys, exact credentials, SSNs, exact phone numbers, and similar dangerous data even though the repo is private.
 
 You can read, edit, or delete any file in your repo at any time. There is no vendor lock-in. The notes are plain Markdown.
 

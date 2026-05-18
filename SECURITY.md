@@ -52,7 +52,7 @@ The biggest realistic risks are:
 
 Mitigations the template recommends:
 
-- The Use Template flow defaults to a Private repo and the docs reinforce that.
+- The setup docs repeatedly tell users to choose Private when creating their memory repo.
 - The skill files explicitly require redaction and explicitly forbid writing personal notes to the public foundation.
 - The video demo guide tells creators to use a fake demo repo with invented names instead of their real memory.
 - The Quickstart and FAQ tell users to grant ChatGPT access only to the specific private memory repo, not all repos.
