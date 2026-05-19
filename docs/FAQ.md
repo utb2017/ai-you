@@ -6,7 +6,7 @@ No. AI You is a free public GitHub template plus two short commands. There is no
 
 ### Is this safe?
 
-Your memory repo should be **private**. When you create it from the template, choose Private. Only you and ChatGPT (through the GitHub connector you authorize) should be able to read or write to it. The archive skill is also told to redact passwords, API keys, exact credentials, SSNs, exact phone numbers, and similar dangerous data even though the repo is private.
+Your memory repo is **private** by default. Only you and ChatGPT (through the GitHub connector you authorize) can read or write to it. The archive skill is also told to redact passwords, API keys, exact credentials, SSNs, exact phone numbers, and similar dangerous data even though the repo is private.
 
 You can read, edit, or delete any file in your repo at any time. There is no vendor lock-in. The notes are plain Markdown.
 
@@ -93,3 +93,9 @@ Not right now. AI You is a free public foundation. If we ever offer paid service
 ### Why "AI You"?
 
 Because the goal is not to give ChatGPT yet another generic memory. It's to give ChatGPT continuity about **you** — the people, projects, and patterns that make up your life.
+
+### What's the `Text my <person>` skill?
+
+It's an optional **bonus skill** that turns a request like `Text my mom and tell her I'll be late` into a tappable `sms:` link. Tapping the link opens your phone's Messages app with the recipient and body pre-filled. **You** still press Send. ChatGPT can't send anything on its own — there is no third-party messaging API in the loop. See [`docs/SMS_LINK_SKILL.md`](SMS_LINK_SKILL.md). To install it, see [`prompts/04-install-text-my-person.md`](../prompts/04-install-text-my-person.md).
+
+Real phone numbers go only in your private repo, only in `contacts/contacts.md`. They are never written to the public foundation.

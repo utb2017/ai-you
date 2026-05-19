@@ -77,6 +77,17 @@ You can:
 
 Nothing in AI You creates lock-in.
 
+## 8. The SMS link doesn't open Messages on my phone
+
+**Symptom:** You ran `Text my <person>`, ChatGPT replied with a link, but tapping it doesn't open Messages.
+
+**Try:**
+
+1. **Long-press the `sms-link:` line** in the reply (the plain-text fallback). Copy it. Paste it into your phone's browser address bar. Most phones will then offer to open Messages.
+2. **Check the link is actually a `sms:` URL.** Some surfaces wrap the URL in trackers — if it starts with `https://` instead of `sms:`, ChatGPT misformatted it. Ask: `Re-do the link as a raw sms: URL with the body URL-encoded.`
+3. **Check the number format.** It must be E.164: `+15555550100`, no spaces, no dashes, no parentheses.
+4. **Test with yourself first.** Replace one row in `contacts/contacts.md` with your own number, then run `Text myself: testing.` Tap the link. If that works, the issue is the number formatting in the original row.
+
 ## Still stuck?
 
 Open an issue on the public foundation:

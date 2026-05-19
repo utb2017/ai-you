@@ -16,6 +16,10 @@ This is the root index for an AI You memory archive. In **your private** `ai-you
 - [Memories](categories/memories/_index.md)
 - [Inbox](categories/inbox/_index.md)
 
+## Skill data
+
+- [Contacts](contacts/_index.md) — used by the optional `Text my <person>` skill.
+
 ## Recent Imports
 
 No imports yet.

@@ -230,9 +230,28 @@ It also updates the right `_index.md` files and the import log so future recalls
 
 ---
 
+## Bonus skill: `Text my <person>`
+
+Once setup is working, you can install an optional bonus skill that turns a request like:
+
+> Text my mom and tell her I'll be late for dinner.
+
+into a tappable `sms:` link that opens your phone's Messages app with the recipient and body pre-filled. **You** still press Send.
+
+It does not auto-send. It does not call any third-party messaging API. It just writes the draft, looks up the contact in your private repo, and hands you a clickable link.
+
+- Skill: [`skills/text-my-person/SKILL.md`](skills/text-my-person/SKILL.md)
+- Setup prompt: [`prompts/04-install-text-my-person.md`](prompts/04-install-text-my-person.md)
+- Safety doc: [`docs/SMS_LINK_SKILL.md`](docs/SMS_LINK_SKILL.md)
+- Contacts template: [`templates/contacts-template.md`](templates/contacts-template.md)
+
+Real phone numbers belong only in your private `ai-you-memory` repo, in `contacts/contacts.md`. Never in the public foundation.
+
+---
+
 ## Privacy and safety
 
-- **Your memory repo should be Private.** When GitHub asks for visibility, choose Private and keep it that way.
+- **Your memory repo should be Private.** The template flow defaults to Private. Keep it that way.
 - **AI You preserves meaning, not secrets.** The archive skill is told to redact: passwords, API keys, auth tokens, bank details, SSNs, private keys, exact credentials, exact phone numbers, and anything dangerous if leaked.
 - **The public repo (`utb2017/ai-you`) must never receive your personal notes.** Both skills are told to refuse writes to the public foundation.
 - **You can read, edit, or delete anything any time.** The notes are plain Markdown files in your own GitHub account.
@@ -261,8 +280,9 @@ ai-you/
   README.md                 - this file
   index.md                  - root index for your private memory repo
   categories/               - one folder per life category
-  skills/                   - Archive GitHub + Recall Context instructions
-  prompts/                  - the three prompts you paste into ChatGPT
+  contacts/                 - placeholder for the Text my person skill
+  skills/                   - Archive GitHub + Recall Context + bonus skills
+  prompts/                  - the prompts you paste into ChatGPT
   templates/                - Markdown templates for new notes
   logs/                     - import log + smoke-test folder
   docs/                     - quickstart, FAQ, troubleshooting, privacy, demo guide
@@ -279,6 +299,7 @@ The same structure is copied into your private `ai-you-memory` repo when you cre
 - [FAQ](docs/FAQ.md) — common questions before and after setup.
 - [Troubleshooting](docs/TROUBLESHOOTING.md) — what to try when something is off.
 - [Privacy](docs/PRIVACY.md) — what AI You does and does not see.
+- [SMS link skill](docs/SMS_LINK_SKILL.md) — how the optional `Text my <person>` skill works.
 - [Demo guide](docs/VIDEO_DEMO_SCRIPT.md) — for creators who want to make a video about this.
 - [Contributing](CONTRIBUTING.md) — how to suggest improvements (only edits to the public foundation, never anyone's personal data).
 

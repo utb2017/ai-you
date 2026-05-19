@@ -82,3 +82,7 @@ From here on, your loop is:
 - new chat about a recurring topic → `Recall Context`
 
 Everything else is optional.
+
+## Optional bonus skill: `Text my <person>`
+
+If you want ChatGPT to draft texts and build tappable `sms:` links to your saved contacts, run [`prompts/04-install-text-my-person.md`](../prompts/04-install-text-my-person.md). It does not auto-send. You still press Send in Messages. See [`docs/SMS_LINK_SKILL.md`](SMS_LINK_SKILL.md) for the full safety model.
