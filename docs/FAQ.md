@@ -45,18 +45,6 @@ If `Archive GitHub` produces only a summary instead of an actual file in your re
 2. Re-run the setup prompt. The smoke-test step is the fastest way to find out whether your current session can write.
 3. As a last resort, the archive skill is told to produce a complete `LOCAL ARCHIVE RELAY PACKET` — a single Markdown blob you can paste into your repo by hand.
 
-### What if it archives everything as one generic note?
-
-That usually means the model answered too quickly or did not run the full archive workflow.
-
-Try:
-
-1. Switch from instant/fast mode to an extended-thinking mode.
-2. Paste the long form of [`prompts/02-archive-github.md`](../prompts/02-archive-github.md).
-3. Tell it: "Run the full archive workflow. Split major topics into separate notes, update indexes/logs, and verify GitHub writes."
-
-The point of AI You is structured memory, not one vague transcript summary.
-
 ### What if a confirmation pop-up keeps appearing?
 
 That's the GitHub connector's safety check. It's expected. Press Confirm.
@@ -105,6 +93,24 @@ Not right now. AI You is a free public foundation. If we ever offer paid service
 ### Why "AI You"?
 
 Because the goal is not to give ChatGPT yet another generic memory. It's to give ChatGPT continuity about **you** — the people, projects, and patterns that make up your life.
+
+### Recall Context pulled my history but the actual reply was thin. What's going on?
+
+This is a known failure mode when you ask ChatGPT to recall and respond in one motion (for example, "Recall Context, then let's talk about my partner"). Some model surfaces will spend most of their output budget on summarizing the retrieved notes and short-change the actual reply.
+
+The recall-context skill in this repo is now told to budget for the response over the retrieval — keep the retrieval summary to 3 to 5 bullets, then go deep on the reply. If you still see thin replies, you can force the budget yourself by asking:
+
+```text
+Recall Context. Keep your retrieval summary to 5 bullets max, then give me a full human reply about <topic>.
+```
+
+If the chat was a vent rather than a question, you can also say:
+
+```text
+Recall Context. I'm not asking for a list, I'm processing. Reflect first, then suggest a next step at the end.
+```
+
+The skill is told to recognize venting and respond with depth instead of a bullet list, but a direct nudge from you is the most reliable fix until model surfaces stabilize.
 
 ### What's the `Text my <person>` skill?
 
