@@ -66,6 +66,17 @@ We do not see, store, or process anything you save. Your memory lives in your Gi
 
 This is the whole flow. Most people finish in under 10 minutes.
 
+### Recommended ChatGPT mode
+
+For setup and archiving, use a reasoning/extended-thinking ChatGPT mode rather than the fastest instant-answer mode.
+
+Why:
+
+- In testing, the standard extended-thinking surface exposed GitHub write and memory tools more reliably than Pro for this workflow.
+- Instant/fast responses may produce one shallow summary note instead of doing the full archive job: choosing categories, splitting mixed topics, updating indexes, updating logs, and verifying writes.
+
+If setup or archiving acts too shallow, switch to an extended-thinking mode and rerun the same prompt before assuming anything is broken.
+
 ### 1. Make sure you have a GitHub account
 
 If you don't have one, sign up at [github.com/join](https://github.com/join). It is free.
@@ -266,8 +277,9 @@ ChatGPT says GitHub is connected but cannot write?
 
 1. Make sure your private repo exists, is named correctly, and is granted to ChatGPT in the GitHub connector.
 2. Some ChatGPT model surfaces hide the GitHub write tool. If yours does, **switch model** (in our testing, the standard "extended thinking" model exposed the GitHub and memory tools more reliably than Pro). Then rerun the setup prompt.
-3. Ask ChatGPT to run the setup smoke test again. If it can create the smoke-test file and read it back, you're good.
-4. Confirmation pop-ups are normal. The GitHub connector is allowed to ask you to confirm a write. Press Confirm.
+3. If ChatGPT archives the whole chat as one shallow note, switch out of instant/fast mode and use an extended-thinking mode. The archive skill needs enough reasoning time to split topics, categorize correctly, update indexes/logs, and verify the write.
+4. Ask ChatGPT to run the setup smoke test again. If it can create the smoke-test file and read it back, you're good.
+5. Confirmation pop-ups are normal. The GitHub connector is allowed to ask you to confirm a write. Press Confirm.
 
 The longer playbook is in [`docs/TROUBLESHOOTING.md`](docs/TROUBLESHOOTING.md).
 

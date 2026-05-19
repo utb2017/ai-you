@@ -45,6 +45,18 @@ If `Archive GitHub` produces only a summary instead of an actual file in your re
 2. Re-run the setup prompt. The smoke-test step is the fastest way to find out whether your current session can write.
 3. As a last resort, the archive skill is told to produce a complete `LOCAL ARCHIVE RELAY PACKET` — a single Markdown blob you can paste into your repo by hand.
 
+### What if it archives everything as one generic note?
+
+That usually means the model answered too quickly or did not run the full archive workflow.
+
+Try:
+
+1. Switch from instant/fast mode to an extended-thinking mode.
+2. Paste the long form of [`prompts/02-archive-github.md`](../prompts/02-archive-github.md).
+3. Tell it: "Run the full archive workflow. Split major topics into separate notes, update indexes/logs, and verify GitHub writes."
+
+The point of AI You is structured memory, not one vague transcript summary.
+
 ### What if a confirmation pop-up keeps appearing?
 
 That's the GitHub connector's safety check. It's expected. Press Confirm.

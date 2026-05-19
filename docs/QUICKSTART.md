@@ -8,6 +8,14 @@ You'll need:
 - ChatGPT (free or paid). The GitHub connector must be available to your account.
 - About 10 minutes.
 
+## Use the right ChatGPT mode
+
+For setup and archiving, use a reasoning/extended-thinking mode when available.
+
+Avoid instant/fast mode for the archive pass. It may compress the whole chat into one shallow note instead of doing the full workflow: category choice, topic splitting, index updates, import-log updates, and write verification.
+
+In testing, the standard extended-thinking surface exposed GitHub write and memory tools more reliably than Pro for this workflow. If GitHub writing does not appear, switch model/surface and rerun the setup prompt before assuming the repo is broken.
+
 ## 1. Connect GitHub to ChatGPT
 
 In ChatGPT, open connectors / apps and turn on GitHub. When GitHub asks which repos ChatGPT can read and write, you can pick:
